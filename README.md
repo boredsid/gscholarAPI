@@ -3,6 +3,6 @@ Allows you to search for authors on google scholar and return their interests, p
 
 #### Usage:
 ````
-gscholar-api.herokuapp.com\getAuthor?author=<Author>&uni=<University>
+scholar-search.herokuapp.com\getAuthor?author=<Author>&uni=<University>
 ````
 

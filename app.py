@@ -1,5 +1,5 @@
 import gscholarFetcher
-from flask import Flask, request, jsonify, make_response,redirect
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
