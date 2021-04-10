@@ -2,7 +2,7 @@ from scholarly import scholarly
 
 def get_author(author,university=""):
   url_part = "https://scholar.google.co.in/citations?user="
-  authorSearch = scholarly.search_author(author+", "+university)
+  authorSearch = scholarly.search_author(author+(", "+university if university!='' else ''))
   authorResult = next(authorSearch)
   authorRaw = scholarly.fill(authorResult,sections=['basics','indices','publications'])
   authorDetails = {'name':authorRaw['name'],'affiliation':authorRaw['affiliation'],'email_domain':authorRaw['email_domain'],'interests':authorRaw['interests']
