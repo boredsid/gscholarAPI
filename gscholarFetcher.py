@@ -6,7 +6,7 @@ def get_author(author,university=""):
   try:
     authorResult = next(authorSearch)
   except:
-    return "Not Found"
+    return {'result':"not found"}
   authorRaw = scholarly.fill(authorResult,sections=['basics','indices','publications'])
   authorDetails = {'name':authorRaw['name'],'affiliation':authorRaw['affiliation'],'email_domain':authorRaw['email_domain'],'interests':authorRaw['interests']
                   ,'publications':len(authorRaw['publications']),'citedby':authorRaw['citedby'],'hindex':authorRaw['hindex'],'i10index':authorRaw['i10index']
